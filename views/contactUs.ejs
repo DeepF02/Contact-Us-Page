@@ -1,0 +1,56 @@
+<% layout('layouts/boilerplate') %>
+  <h1 class="text-center title">Contact Us</h1>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card my-3">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="card-title text-center">Lets get connected!</h2>
+            <div class="card-text mt-3 mb-4 text-center">
+              <small class="text-muted">Hate forms? Send us an <a href="mailto: ieeevjtiofficial@gmail.com"
+                  class="text-success no-decoration">email</a> instead.</small>
+            </div>
+            <img src="./images/contact_us.jpg" class="img-fluid card-img-bottom" alt="">
+            <!-- <img class="img-fluid card-img-bottom"
+            src="https://images.unsplash.com/photo-1586769852044-692d6e3703f0?ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            alt=""> -->
+          </div>
+          <div class="col-md-6 mx-auto">
+            <div class="card-body">
+
+              <form action="/contact" id="contactForm" method="POST">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Name</label>
+                  <input type="text" class="form-control bg-light" placeholder="Your Name" name="contact[name]"
+                    id="username" required>
+                </div>
+                <div class="mb-3">
+                  <label for="userEmail" class="form-label">EmailID</label>
+                  <input type="email" class="form-control bg-light" placeholder="Official email ID"
+                    name="contact[email]" id="userEmail" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="year">Graduation Year</label>
+                  <div class="input-group">
+                    <span class="input-group-text" id="price-label">20</span>
+                    <input type="number" class="form-control bg-light" placeholder="ex 23'" aria-label="price"
+                      aria-describedby="price-label" id="year" name="contact[year]">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message for Us</label>
+                  <textarea type="text" class="form-control bg-light" name="contact[message]"
+                    id="message" required></textarea>
+                </div>
+                <div class="mb-3 d-grid">
+                  <button type="submit" id="button" class="btn btn-info btn-large">Submit<span>
+                      <iclass="fa font-weight-bold fa-angle-double-right animate__animated animate__rubberBand"></i>
+                    </span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

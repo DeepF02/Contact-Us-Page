@@ -1,0 +1,85 @@
+        /* custom-navbar */
+        
+        #custom-navbar {
+            background-color: var(--primary-bg-color);
+            color: var(--dark-grey);
+            height: 70px;
+            width: 100%;
+            z-index: 9999;
+            position: fixed;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .custom-navbar-shadow {
+            background-color: var(--primary-bg-color);
+            color: var(--dark-grey);
+            height: 70px;
+            width: 100%;
+            z-index: 9999;
+            position: fixed;
+            margin: 0 auto;
+            overflow: auto;
+            box-shadow: 0px 0px 5px 5px #e1e1e1;
+        }
+        
+        .custom-ieee-logo {
+            width: 100px;
+            height: 50px;
+        }
+        
+        .custom-navbar ul,
+        .custom-navbar-shadow ul {
+            display: flex;
+            overflow: hidden;
+        }
+        
+        #custom-navbar a,
+        .custom-navbar-shadow a {
+            color: var(--dark-grey);
+            padding: 10px;
+            margin: 0 5px;
+        }
+        
+        .nav-item a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+        
+        .nav-item a:hover {
+            color: var(--ieee_blue);
+            font-weight: bold;
+            border-bottom: 2px var(--ieee_blue) solid;
+        }
+        
+        .custom-navbar .flex,
+        .custom-navbar-shadow .flex {
+            justify-content: space-between;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lol {
+            border: 1px red solid;
+        }
+        /* @media (max-width: 500px) {
+    .custom-navbar {
+        height: 110px;
+        width: 100%;
+        overflow: visible;
+    }
+    .custom-navbar .flex {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .custom-navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+} */

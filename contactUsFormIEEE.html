@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./public/css/styles.css" />
+  <link rel="stylesheet" href="./public/css/utilities.css" />
+
+  <link rel="stylesheet" href="./public/css/Footer.css" />
+  <link rel="stylesheet" href="./public/css/Navbar.css" />
+  <link rel="stylesheet" href="./public/css/contactUs.css" />
+
+  <!-- BootStrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+  <!--FAVICON -->
+  <link rel="shortcut icon" href="favicon.png" type="image/png" />
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- Font-Awesome JS-->
+  <!-- <script src="https://kit.fontawesome.com/21854b596b.js" crossorigin="anonymous"></script> -->
+
+  <!-- emailjs integration -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_rpEpgam7QRE6HXxNxhE6P");
+    })();
+  </script>
+  <title>Contact us</title>
+</head>
+
+<body class="d-flex flex-column vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="public/images/ieee_logo.png" loading="lazy" alt='ieee_logo'
+            class="m-1 custom-ieee-logo" /></a>
+        <div class="together"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/dashboard">R&D</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/magazine">Magazine</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/membership">Membership</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- {admin?.result ? (
+          <div >
+            
+        <Button variant="contained"  color="secondary" onClick={logout}>Logout</Button>
+          </div>
+        ) : (
+          
+          <Button component={Link} to="/admin" variant="contained"  color="primary">Sign In</Button>
+        )} -->
+
+      </div>
+    </nav>
+  </header>
+  <main class="mt-3">
+    <!-- I have removed container from the class as it was showing unexpected margin -->
+    <h1 class="text-center title">Contact Us</h1>
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="card my-3" id="card">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="card-title text-center" id="card-title">Lets get connected!</h2>
+              <div class="card-text mt-3 mb-4 text-center">
+                <small class="text-muted">Hate forms? Send us an <a href="mailto: ieeevjtiofficial@gmail.com"
+                    class="text-success no-decoration">email</a> instead.</small>
+              </div>
+              <!-- </div> -->
+              <img src="public/images/contact_us.jpg" class="img-fluid card-img-bottom" alt="">
+              <!-- <img class="img-fluid card-img-bottom"
+                src="https://images.unsplash.com/photo-1586769852044-692d6e3703f0?ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt=""> -->
+            </div>
+            <div class="col-md-6 mx-auto">
+              <div class="card-body">
+
+                <form id="contactForm">
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Name</label>
+                    <input type="text" class="form-control bg-light" placeholder="Your Name*" name="campground[title]"
+                      id="username" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="userEmail" class="form-label">EmailID</label>
+                    <input type="email" class="form-control bg-light" placeholder="Your Email-ID*"
+                      name="campground[location]" id="userEmail" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="year">Graduation Year</label>
+                    <div class="input-group">
+                      <span class="input-group-text" id="price-label">20</span>
+                      <input type="number" class="form-control bg-light" placeholder="ex 23'" aria-label="price"
+                        aria-describedby="price-label" id="year" name="campground[price]">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message for Us</label>
+                    <textarea type="text" class="form-control bg-light" name="campground[description]"
+                      id="message" required></textarea>
+                  </div>
+                  <div class="mb-3 d-grid">
+                    <button type="submit" id="button" class="btn btn-info btn-large">Submit<span>
+                        <i class="fa font-weight-bold fa-angle-double-right animate__animated animate__rubberBand"></i>
+                      </span></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <section class="footer_section bg-footer">
+    <footer class="footer">
+      <div class="container grid grid-3">
+        <div>
+          <h1>IEEE VJTI</h1>
+          <div class="line1">
+            <img src='public/images/ieee_smallest.png' class="img-fluid" alt='ieee_logo' loading="lazy" id="ieee_smallest" />
+          </div>
+        </div>
+        <div class="info">
+          <h3>
+            <a href="/"> Become a Member </a>
+          </h3>
+          <p>Get notified with the latest updates in the technical world, articles, seminars and workshops. </p>
+        </div>
+        <div class="social">
+
+          <h3>Connect With Us</h3>
+          <a href="https://www.linkedin.com/company/ieee-vjti" target="_blank"><i
+              class="fab fa-linkedin-in fa-2x"></i></a>
+          <a href="https://www.instagram.com/ieeevjti/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href={`mailto:ieeevjtiofficial@gmail.com?Subject=Message%20for%20IEEE%20VJTI`}><i
+              class="fas fa-envelope-square fa-2x"></i></a>
+          <a href="https://www.youtube.com/channel/UCXkEZSsh_RWiBfrJIPY27vg" target="_blank"><i
+              class="fab fa-youtube fa-2x"></i></a>
+
+          <p><a href="https://issuu.com/ieeevjti" target="_blank">Issuu</a>
+            <br />
+            <a href="https://linktr.ee/ieeevjti" target="_blank">LinkTree</a>
+          </p>
+
+
+        </div>
+      </div>
+      <hr class="horizontal_line" />
+      <p class="text-center">Copyright &copy;IEEE VJTI 2021</p>
+
+
+    </footer>
+  </section>
+
+
+  <!-- email.js script file for sending mail -->
+  <script src="./public/javascript/email.js"></script>
+
+  <!-- Font-Awesome JS -->
+  <script src="https://use.fontawesome.com/fe9a669071.js"></script>
+
+  <!-- BootStrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

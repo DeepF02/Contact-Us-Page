@@ -1,0 +1,89 @@
+<!-- //old Navbar before using react -->
+<!-- <script>
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    function myFunction() {
+      if (
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
+      ) {
+        document.getElementById("navbar").className = "navbar-shadow";
+      } else {
+        document.getElementById("navbar").className = "navbar";
+      }
+    }
+  </script>
+
+   NAVBAR -->
+<!-- <div class="navbar" id="navbar">
+    <div class="flex">
+      <img src="./images/ieee_logo.png" loading="lazy" alt="IEEE logo" class="m-1" />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">R&D</a></li>
+          <li><a href="#">Magazine</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div> -->
+
+<!-- //New Navbar after using react -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+
+
+      <a class="navbar-brand" href="/"><img src="./images/ieee_logo.png" loading="lazy" alt='ieee_logo'
+          class="m-1 custom-ieee-logo" /></a>
+
+      <div class="together"></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/dashboard">R&D</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/magazine">Magazine</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/membership">Membership</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Contact Us</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <script> {admin?.result ? ( 
+        <div>
+          <Button variant="contained" color="secondary" onClick={logout}>Logout</Button>
+        </div>
+         ) : (
+          <Button component={Link} to="/admin" variant="contained" color="primary">Sign In</Button>
+         )} </script>
+    </div>
+  </nav>
+</header>
