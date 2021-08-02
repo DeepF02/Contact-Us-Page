@@ -28,7 +28,7 @@
   <link rel="icon" href="favicon.png" type="image/png">
 
   <!-- Font-Awesome JS-->
-  <!-- <script src="https://kit.fontawesome.com/21854b596b.js" crossorigin="anonymous"></script> -->
+  <script src="https://kit.fontawesome.com/21854b596b.js" crossorigin="anonymous"></script>
 
   <!-- emailjs integration -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
@@ -42,7 +42,7 @@
 
 <body class="d-flex flex-column vh-100">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="/"><img src="public/images/ieee_logo.png" loading="lazy" alt='ieee_logo'
             class="m-1 custom-ieee-logo" /></a>
@@ -51,8 +51,6 @@
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -78,17 +76,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- {admin?.result ? (
-          <div >
-            
-        <Button variant="contained"  color="secondary" onClick={logout}>Logout</Button>
-          </div>
-        ) : (
-          
-          <Button component={Link} to="/admin" variant="contained"  color="primary">Sign In</Button>
-        )} -->
-
       </div>
     </nav>
   </header>
@@ -134,8 +121,8 @@
                   </div>
                   <div class="mb-3">
                     <label for="message" class="form-label">Message for Us</label>
-                    <textarea type="text" class="form-control bg-light" name="campground[description]"
-                      id="message" required></textarea>
+                    <textarea type="text" class="form-control bg-light" name="campground[description]" id="message"
+                      required></textarea>
                   </div>
                   <div class="mb-3 d-grid">
                     <button type="submit" id="button" class="btn btn-info btn-large">Submit<span>
@@ -156,7 +143,8 @@
         <div>
           <h1>IEEE VJTI</h1>
           <div class="line1">
-            <img src='public/images/ieee_smallest.png' class="img-fluid" alt='ieee_logo' loading="lazy" id="ieee_smallest" />
+            <img src='public/images/ieee_smallest.png' class="img-fluid" alt='ieee_logo' loading="lazy"
+              id="ieee_smallest" />
           </div>
         </div>
         <div class="info">

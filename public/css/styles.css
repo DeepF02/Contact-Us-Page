@@ -35,7 +35,7 @@ a {
   text-decoration: none;
 }
 html {
-  overflow-x: hidden;
+  /* overflow-sx: hidden; */
   scroll-behavior: smooth;
 }
 
@@ -60,7 +60,7 @@ ul {
   z-index: 9999;
   position: fixed;
   margin: 0 auto;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 .navbar-shadow {
