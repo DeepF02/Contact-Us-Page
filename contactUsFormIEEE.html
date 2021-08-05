@@ -100,29 +100,53 @@
             <div class="col-md-6 mx-auto">
               <div class="card-body">
 
-                <form id="contactForm">
+                <form method="POST" id="contactForm" class="client-validation" novalidate>
                   <div class="mb-3">
                     <label for="username" class="form-label">Name</label>
-                    <input type="text" class="form-control bg-light" placeholder="Your Name*" name="campground[title]"
+                    <input type="text" class="form-control bg-light" placeholder="Your Name*" name="contact[name]"
                       id="username" required>
+                    <div class="valid-feedback">
+                        Good to go!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please state your Name!!
+                    </div>
                   </div>
                   <div class="mb-3">
                     <label for="userEmail" class="form-label">EmailID</label>
                     <input type="email" class="form-control bg-light" placeholder="Your Email-ID*"
-                      name="campground[location]" id="userEmail" required>
+                      name="contact[email]" id="userEmail" required>
+                    <div class="valid-feedback">
+                        Good to go!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide your email-Id!!
+                      </div>
                   </div>
                   <div class="mb-3">
                     <label class="form-label" for="year">Graduation Year</label>
                     <div class="input-group">
                       <span class="input-group-text" id="price-label">20</span>
                       <input type="number" class="form-control bg-light" placeholder="ex 23'" aria-label="price"
-                        aria-describedby="price-label" id="year" name="campground[price]">
+                        aria-describedby="price-label" id="year" name="contact[price]" required>
+                      <div class="valid-feedback">
+                        Good to go!
+                      </div>
+                      <div class="invalid-feedback">
+                          Please specify the year of graduation!!
+                        </div>
                     </div>
                   </div>
                   <div class="mb-3">
                     <label for="message" class="form-label">Message for Us</label>
-                    <textarea type="text" class="form-control bg-light" name="campground[description]" id="message"
+                    <textarea type="text" class="form-control bg-light" name="contact[description]" id="message"
                       required></textarea>
+                    <div class="valid-feedback">
+                      Good to go!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please add some description!!
+                      </div>
                   </div>
                   <div class="mb-3 d-grid">
                     <button type="submit" id="button" class="btn btn-info btn-large">Submit<span>
@@ -182,6 +206,28 @@
 
   <!-- email.js script file for sending mail -->
   <script src="./public/javascript/email.js"></script>
+
+  <script>
+    (function () {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.client-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
 
   <!-- Font-Awesome JS -->
   <script src="https://use.fontawesome.com/fe9a669071.js"></script>
