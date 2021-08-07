@@ -100,7 +100,7 @@
             <div class="col-md-6 mx-auto">
               <div class="card-body">
 
-                <form method="POST" id="contactForm" class="client-validation" novalidate>
+                <form action="/contact" method="POST" id="contactForm" class="client-validation" novalidate>
                   <div class="mb-3">
                     <label for="username" class="form-label">Name</label>
                     <input type="text" class="form-control bg-light" placeholder="Your Name*" name="contact[name]"
@@ -128,7 +128,7 @@
                     <div class="input-group">
                       <span class="input-group-text" id="price-label">20</span>
                       <input type="number" class="form-control bg-light" placeholder="ex 23'" aria-label="price"
-                        aria-describedby="price-label" id="year" name="contact[price]" required>
+                        aria-describedby="price-label" id="year" name="contact[year]" required>
                       <div class="valid-feedback">
                         Good to go!
                       </div>
@@ -203,17 +203,11 @@
     </footer>
   </section>
 
-
-  <!-- email.js script file for sending mail -->
-  <script src="./public/javascript/email.js"></script>
-
   <script>
     (function () {
       'use strict'
-
       // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.querySelectorAll('.client-validation')
-
+      const forms = document.querySelectorAll('.client-validation')
       // Loop over them and prevent submission
       Array.from(forms)
         .forEach(function (form) {
@@ -222,13 +216,14 @@
               event.preventDefault()
               event.stopPropagation()
             }
-
             form.classList.add('was-validated')
           }, false)
         })
     })()
   </script>
-
+  
+  <!-- email.js script file for sending mail -->
+  <script src="./public/javascript/email.js"></script>
   <!-- Font-Awesome JS -->
   <script src="https://use.fontawesome.com/fe9a669071.js"></script>
 

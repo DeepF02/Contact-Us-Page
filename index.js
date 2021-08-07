@@ -13,7 +13,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => console.log('Database connected'));
 
-const app= express();
+const app = express();
 
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
@@ -31,11 +31,29 @@ app.get('/contact/submit', (req, res) => {
 });
 
 app.post('/contact', async (req, res) => {
+    // const form = document.querySelector('#contactForm');
+    // form.addEventListener('submit', async event => {
+        // event.preventDefault();
+        // const serviceID = 'default_service';
+        // const templateID = 'contact_form';
+        // let userDetails = {
+        //     to_name: document.querySelector('#username').value,
+        //     user_email: document.querySelector('#userEmail').value,
+        // };
+        // await emailjs.send(serviceID, templateID, userDetails)
+        //     .then(res => {
+        //         console.log("success", res.status);
+        //         alert('Sent!');
+        //     })
+            // }, err => {
+            //     alert(JSON.stringify(err));
+            // });
+    // });
     const contactInfo = new contactModel(req.body.contact);
     await contactInfo.save();
     res.redirect(`/contact/submit`);
 })
 
-app.listen(1800, ()=>{
+app.listen(1800, () => {
     console.log("Serving on port 1800")
 })
